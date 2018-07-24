@@ -7,6 +7,9 @@ class PostList extends Component {
       <button onClick={() => this.props.fetchPosts()}>Fetch Posts</button>
       { this.props.blog.isFetching && <div>Fetching...</div>}
         post list
+        {
+          this.props.blog.posts.map(p => <div>{p.title}</div>)
+        }
       </div>
     );
   }
